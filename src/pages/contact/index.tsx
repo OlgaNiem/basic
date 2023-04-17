@@ -9,41 +9,32 @@ export default function Home() {
     console.log(data);
   }
   return (
-    <form className={style.container} onSubmit={handleSubmit}>
-    <h1>Get in touch</h1>
-    <div className="email block">
-      <label htmlFor="frm-email">Email</label>
-      <input id="frm-email" type="email" name="email" autoComplete="email" required />
-      
-    </div>
     
-    <div className={style.nameblock}>
+    <form className={style.container} onSubmit={handleSubmit}>
+      <h2>Contact form</h2>
+
+      <div className={style.input}>
+        <label htmlFor="frm-email">Email</label>
+        <input id="frm-email" type="email" name="email" autoComplete="email" required />
+      </div>
+
+    <div className={style.name}>
       <div>
         <label htmlFor="frm-first">First Name</label>
-        <input
-          id="frm-first"
-          type="text"
-          name="first"
-          autoComplete="given-name"
-          required
-        />
+        <input id="frm-first" type="text" name="first" autoComplete="given-name"  required />
       </div>
       <div>
         <label htmlFor="frm-last">Last Name</label>
-        <input
-          id="frm-last"
-          type="text"
-          name="last"
-          autoComplete="family-name"
-          required
-        />
+        <input id="frm-last" type="text" name="last"  autoComplete="family-name" required  />
       </div>
     </div>
+
     <div className={style.textarea}>
       <label htmlFor="frm-message">Message</label>
       <textarea id="frm-message" name="message"></textarea>
     </div>
-    <div className="button block">
+
+    <div className={style.button}>
       <button type="submit">Submit</button>
     </div>
   </form>
