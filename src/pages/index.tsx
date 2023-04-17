@@ -1,6 +1,7 @@
 import style from '../styles/Home.module.css'
 import Box from '@/components/Box/Box'
 import Form from '@/components/Form/Form'
+import Link from 'next/link';
 
 export default function Home() {
   // Logic
@@ -10,7 +11,14 @@ export default function Home() {
   }
   return (
     <div>
+      
       <h1>Welcome</h1>
+      <h2 className="title">
+        Read <Link href="/about">about page!</Link>
+      </h2>
+      <h2 className="title">
+        Read <Link href="/contact">contact page!</Link>
+      </h2>
       <form className={style.form}>
         <input type="text" placeholder='Write something' />
         <button type='submit' color={'yellow'} onClick={consoleLog}>Submit</button>
