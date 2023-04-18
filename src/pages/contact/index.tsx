@@ -18,12 +18,10 @@ export default function Home() {
         <input id="frm-email" type="email" name="email" autoComplete="email" required />
       </div>
 
-    <div className={style.input}>
-      
+      <div className={style.input}>
         <label htmlFor="frm-first">Name</label>
         <input id="frm-first" type="text" name="first" autoComplete="given-name"  required />
-      
-    </div>
+      </div>
 
     <div className={style.textarea}>
       <label htmlFor="frm-message">Message</label>

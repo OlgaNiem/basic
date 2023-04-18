@@ -1,10 +1,10 @@
 import React from 'react'
-import style from '../styles/Home.module.css'
+import style from '../../styles/Home.module.css'
 import Image from 'next/image'
 
 const about = () => {
   return (
-    <div>
+    <div className={style.container}>
       <h1>Three fun facts about cats and dogs</h1>
         <ul>
           <li>The nose print of dogs, cats and other animals is unique – much like a human fingerprint.</li>
@@ -16,7 +16,7 @@ const about = () => {
         ['1', '2', '3'].map(path =>{
           return(
             <div key={path}>
-              <Image src={`/${path}.jpg`} alt='pet' width='420' height='280'/>        
+              <Image src={`/${path}.jpg`} className={style.img} alt='pet' width='580' height='360'/>        
             </div>
           )
         })
